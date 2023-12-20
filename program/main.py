@@ -8,7 +8,7 @@ from flask import (Flask,
                     make_response)
 
 
-from solve_algorithms import SimplexMethod, EvolutionAlgorithm
+from .solve_algorithms import SimplexMethod, EvolutionAlgorithm
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "sjdFODJdsojfsodfjPFJdjs546sdfsoidfjPfj"
