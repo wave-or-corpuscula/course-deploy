@@ -1,0 +1,9 @@
+<div>
+    <img src="{{ url_for('static', filename='images/plot.png') }}" alt="График функции">
+    <p>Найденное решение:</p>
+    {% for arg in solution["parameters"] %}
+        Продукт {{loop.index}}: <b>{{arg|int}}</b>
+        <br>
+    {% endfor %}
+    <p>Найденный максимум: <b>{{solution["best_value"]|round(2)}}</b></p>
+</div>

@@ -1,0 +1,28 @@
+<section id="solution">
+  <div id="solution-tabs"> 
+    <button class="tab-button active" onclick="openTab(event, 'simplex-method')">Симплекс-метод</button> 
+    <button class="tab-button" onclick="openTab(event, 'evolutionary-algorithm')">Эволюционный алгоритм</button> 
+  </div>
+  <section id="solution-content">
+      <div id="simplex-method" class="tab-content active">
+        <div class="table-buttons"> 
+          <button id="simplex-solve">Решить</button>
+        </div>
+        <div id="simplex-solution">
+          <!-- Место для решения симплекс метода -->
+        </div>
+      </div>
+      <div id="evolutionary-algorithm" class="tab-content">
+        <p>Количество особей в популяции: <input id="populationSize" type="text" value="100"></p>
+        <p>Количество популяций: <input id="numGenerations" type="text" value="30"></p>
+        <p>Шанс мутации: <input id="mutationRate" type="text" value="10">%</p>
+        <p>Выборка особей в популяции: <input id="tournamentSize" type="text" value="100"></p>
+        <p>Ограничения параметров:</p> От <input id="minArgVal" type="text" value="0"> до <input id="maxArgVal" type="text" value="1000">
+        <div class="table-buttons"> 
+          <button id="evolutionary-solve" >Эволюция</button>
+        </div>
+        <div id="evolution-solution">
+        </div>
+      </div>
+  </section>
+</section>

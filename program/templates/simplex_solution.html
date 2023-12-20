@@ -1,0 +1,71 @@
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+
+<div class="simplex-solution">
+    {% for iteration in solution.iterations %}
+    <h3>Итерация {{loop.index}}</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        C
+                    </th>
+                    {% for profit in iteration.profits %}
+                        <th>{{profit}}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Базис</td>
+                    {% for i in range(iteration.profits|length) %}
+                        <th>x{{i + 1}}</th>
+                    {% endfor %}
+                    <th>b</th>
+                </tr>
+                {% for row in range(iteration.simplex_table|length) %}
+                <tr>
+                    <th>
+                        x{{iteration.basis[row] + 1}}
+                    </th>
+                    {% for column in range(iteration.simplex_table[row]|length) %}
+                    <td>
+                        {{ iteration.simplex_table[row][column]|round(3) }}
+                    </td>
+                    {% endfor %}
+                    <td>
+                        {{ iteration.reserves[row]|round(3) }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        D
+                    </th>
+                    {% for delta in iteration.deltas %}
+                        <td>
+                            {{delta|round(3)}}
+                        </td>
+                    {% endfor %}
+                </tr>
+            </tfoot>
+        </table>
+        <p>
+            Значение функции F = {{iteration.function|round(3)}}
+        </p>
+    {% endfor %}
+
+    <h3>Итог</h3>
+    Для максимизации прибыли необходимо взять: <br>
+    {% for ind, prod in solution.parameters.items() %}
+        Продукта {{ind + 1}} - <b>{{prod|int}}</b> штуки
+        <br>
+    {% endfor %}
+    В таком случае полученная прибыль составит: <b>{{solution.function|round(3)}}</b> денежных единиц
+    <br>
+</div>

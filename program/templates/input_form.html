@@ -1,0 +1,53 @@
+<div id="input_form">
+      <div class="table-container">
+        <table id="simplex-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Продукт 1</th>
+              <th>Продукт 2</th>
+              <th>Запасы</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Материал 1</th>
+              <td><input name="cell-1-1" ></td>
+              <td><input name="cell-1-2" ></td>
+              <td><input name="reserve-1" ></td>
+            </tr>
+            <tr>
+              <th>Материал 2</th>
+              <td><input name="cell-2-1" value="12"></td>
+              <td><input name="cell-2-2"></td>
+              <td><input name="reserve-2" ></td>
+            </tr>
+            <tr>
+              <th>Цена</th>
+              <td><input name="profit-1"></td>
+              <td><input name="profit-2"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-buttons-container">
+          <div class="table-buttons"> 
+            <button id="add-column">Добавить продукт</button> 
+            <button id="delete-column">Удалить продукт</button>
+            <button id="add-row">Добавить материал</button> 
+            <button id="delete-row">Удалить материал</button> 
+          </div>
+        </div>
+      </div>
+      <div class="increment-buttons">
+        <p>
+          Изменить запасы на <input id="reserves-change-val" type="text">% <button id="change-reserves">Изменить</button> 
+        </p>
+        <p>
+          Изменить прибыль на <input id="profits-change-val" type="text">% <button id="change-profits">Изменить</button> 
+        </p>
+      </div>
+      <div id="error-message" style="color: red;">
+        
+      </div>
+</div>

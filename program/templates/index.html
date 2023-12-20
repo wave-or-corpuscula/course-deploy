@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div id="container">
+
+  {% block sidebar %}
+    {% include "sidebar.html" %}
+  {% endblock %}
+
+  <main id="main-content">
+
+    {% block form %}
+      {% include "input_form.html" %}
+    {% endblock %}
+
+    {% block solution %}
+      {% include "solution.html" %} 
+    {% endblock %}
+
+  </main>
+
+</div>
+
+{% endblock %}

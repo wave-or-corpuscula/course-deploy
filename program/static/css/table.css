@@ -1,0 +1,51 @@
+#simplex-table {
+    border-collapse:separate;
+    border-spacing:0;
+    width:100%;
+    margin-bottom:20px;
+    color:white
+}
+
+#simplex-table th,#simplex-table td {
+    background:linear-gradient(45deg,rgb(62, 29, 29) 0%,rgb(175, 55, 34) 100%);
+    padding:10px;
+    text-align:center;
+    border:1px solid #554177
+}
+
+#simplex-table th {
+    background:linear-gradient(180deg,rgb(66, 22, 133) 0%,#400851 100%)
+}
+
+#simplex-table input {
+    width:100%;
+    padding:5px;
+    border:none;
+    background:rgba(255,255,255,0.3);
+    color:white;
+    text-align:center
+}
+
+#simplex-table input:focus {
+    background:rgba(255,255,255,0.5);
+    outline:none
+}
+
+#simplex-table {
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:20px
+}
+
+#simplex-table td {
+    border:1px solid #ddd;
+    padding:8px
+}
+
+#simplex-table input {
+    width:100px;
+    padding:5px;
+    margin:2px 0;
+    border:1px solid #ddd;
+    box-sizing:border-box
+}
